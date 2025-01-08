@@ -1,0 +1,5 @@
+.env
+node_modules
+src/assets/images/*
+src/assets/pdfs/*
+src/assets/logs/*
