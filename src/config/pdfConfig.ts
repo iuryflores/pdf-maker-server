@@ -26,7 +26,7 @@ const logError = (folder: string, error: any) => {
   const logMessage = `[${timestamp}] Erro na pasta: ${folder} - ${error.message}\n`;
 
   // Cria a pasta de logs, se não existir
-  const logDir = path.dirname(logFile);
+  const logDir = path.dirname('logFile');
   if (!fs.existsSync(logDir)) {
     fs.mkdirSync(logDir, { recursive: true });
   }

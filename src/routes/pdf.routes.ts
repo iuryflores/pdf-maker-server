@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/generate-pdf", (req: Request, res: Response) => {
   try {
     const { pdfFiles, errors } = createPDFsFromFolders();
-
+console.log("teste")
     const response = {
       message: "Processamento concluído!",
       generatedPDFs: pdfFiles,
@@ -16,7 +16,7 @@ router.get("/generate-pdf", (req: Request, res: Response) => {
           ? `Ocorreram erros em ${errors.length} pastas. Verifique o log.`
           : "Sem erros!"
     };
-
+console.log(response)
     return res.status(200).json(response);
   } catch (err) {
     console.error("Erro ao gerar PDFs:", err);
